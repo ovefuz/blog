@@ -3,11 +3,11 @@
 {% block content %}
     {% for post in posts %}
         <div class="post">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
             <h1><a href="">{{ post.title }}</a></h1>
-            <h2>{{ post.published_date }}</h2>
-            <img src="https://psv4.userapi.com/c848124/u248675002/docs/d12/c8cc84a7648b/1.jpg?extra=vNskQBI9HwXw1Zii-492vjynGZ-GCVftwuErma2xau8HBEpw5h_pqvxC7BS_j3SREw7_45KYvxIJIHMxu8h13lgFMD-ZvAcnYm7P0tdEayT1KH9hjjuVtzPdSqdJ77WG_v7b_rFQTzL_SbPuQ0OEY_fzbK8">
             <p>{{ post.text|linebreaksbr }}</p>
-            <a href="">Read more</a>
         </div>
     {% endfor %}
 {% endblock %}
