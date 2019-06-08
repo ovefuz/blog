@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Coda&display=swap');
+
+*{margin: 0; padding: 0;}
+#wrap{max-width: 100%; padding: 30px;}
+header{width: 100%; max-width: 100%; height: auto;}
+header h1{padding: 5px 0px 25px 0px;}
+header h1 a{font-family: 'Righteous', cursive; text-decoration: none; color: #545; font-size: 1.3em;}
+header button{float: right; display: none; margin-top: 15px; width: 30px; height: 30px; border: none; background: none; outline: none; font-size: 1.3em;}
+
+
+nav{width: 100%; height: auto; border-bottom: 1px solid #cecece; border-top: 1px solid #cecece}
+nav ul{list-style-type: none; display: inline-flex;}
+nav ul li{margin-right: 50px; padding: 15px 0px;}
+nav ul li:first-child{margin-left: 30px;}
+nav ul li a{text-decoration: none; font-size: 1.2em; font-family: 'Unica One', cursive;}
+
+@media screen and (max-device-width: 700px){
+	header button{display: block;}
+	nav ul{display: flex; flex-direction: column; }
+	nav ul li{text-align: center; margin-right: 0px;}
+	nav ul li:first-child{margin-left: 0;}
+
+}
+
+.post{max-width: 75%; height: auto;  margin-top: 50px; padding: 15px 25px; border: 1px solid #cecece; font-family: 'Coda', cursive; font-weight: normal;}
+.post h1{padding: 15px 0px; border-bottom: 1px solid #cecece; font-weight: normal;}
+.post h2{color: silver; padding: 15px 0px; font-weight: normal; font-size: 1em;}
+.post img{width: 100%; height: 400px;}
+.post p{padding: 15px 0px;}
+.post a{text-decoration: none; padding-bottom: 20px;}
+
+@media screen and (max-device-width: 700px){
+	.post{max-width: 100%;}
+	.post img{height: 200px;}
+
+}

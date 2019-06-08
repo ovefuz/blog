@@ -1,19 +1,13 @@
-<html>
-    <head>
-        <title>Django Girls blog</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <h1><a href="">{{ post.title }}</a></h1>
+            <h2>{{ post.published_date }}</h2>
+            <img src="https://psv4.userapi.com/c848124/u248675002/docs/d12/c8cc84a7648b/1.jpg?extra=vNskQBI9HwXw1Zii-492vjynGZ-GCVftwuErma2xau8HBEpw5h_pqvxC7BS_j3SREw7_45KYvxIJIHMxu8h13lgFMD-ZvAcnYm7P0tdEayT1KH9hjjuVtzPdSqdJ77WG_v7b_rFQTzL_SbPuQ0OEY_fzbK8">
+            <p>{{ post.text|linebreaksbr }}</p>
+            <a href="">Read more</a>
         </div>
-
-        {% for post in posts %}
-            <div>
-                <p>published: {{ post.published_date }}</p>
-                <h1><a href="">{{ post.title }}</a></h1>
-                <p>{{ post.text|linebreaksbr }}</p>
-            </div>
-        {% endfor %}
-
-    </body>
-</html>
+    {% endfor %}
+{% endblock %}
